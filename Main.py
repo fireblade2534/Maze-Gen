@@ -49,7 +49,7 @@ class MazeGen:
                 self.Board[Direction]["Parent"]=self.AgentPosition
                 self.Board[Direction]["Created"]=True
                 self.AgentPosition=Direction
-                if self.AgentPosition != StartingPos and random.randint(0,100) < 10:
+                if self.AgentPosition != StartingPos and random.randint(0,100) < 7:
                     self.AgentPosition=self.Board[self.AgentPosition]["Parent"]
             if Visiulize:
                 self.PrintBoard(ShowAgent=True)
@@ -104,5 +104,5 @@ class MazeGen:
 
 
 if __name__ == "__main__":
-    MG=MazeGen(14,14)
+    MG=MazeGen(15,15)
     MG.RunMazeGenerator(Visiulize=True,ShowEnd=True)
