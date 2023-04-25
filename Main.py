@@ -104,5 +104,7 @@ class MazeGen:
 
 
 if __name__ == "__main__":
-    MG=MazeGen(15,15)
-    MG.RunMazeGenerator(Visiulize=True,ShowEnd=True)
+    while True:
+        MG=MazeGen(17,17)
+        MG.RunMazeGenerator(Visiulize=True,ShowEnd=True)
+        time.sleep(5)
